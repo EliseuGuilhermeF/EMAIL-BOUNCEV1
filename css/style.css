@@ -1,0 +1,317 @@
+/*
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 1.0
+*/
+
+:root {
+    --primary-color: #6f42c1;
+    --secondary-color: #20c997;
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --dark-text: #f8f9fa;
+    --light-bg: #f8f9fa;
+    --light-card: #ffffff;
+    --light-text: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    background-color: var(--light-card);
+}
+
+body.dark-mode .card {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.header-container {
+    background: linear-gradient(135deg, var(--primary-color), #6610f2);
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    margin-right: 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5a32a8;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #199d7a;
+}
+
+.result-card {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.live-email {
+    border-left: 4px solid #28a745;
+}
+
+.die-email {
+    border-left: 4px solid #dc3545;
+}
+
+.stat-box {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.stat-box i {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 10px;
+    margin: 15px 0;
+}
+
+.theme-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Animation for progress bar */
+.progress-bar {
+    transition: width 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+}:root {
+            --primary-color: #6f42c1;
+            --secondary-color: #20c997;
+            --dark-bg: #121212;
+            --dark-card: #1e1e1e;
+            --dark-text: #f8f9fa;
+            --light-bg: #f8f9fa;
+            --light-card: #ffffff;
+            --light-text: #212529;
+        }
+/*
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 1.0
+*/
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.3s ease;
+            background-color: var(--light-bg);
+            color: var(--light-text);
+        }
+
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            background-color: var(--light-card);
+        }
+
+        body.dark-mode .card {
+            background-color: var(--dark-card);
+            color: var(--dark-text);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header-container {
+            background: linear-gradient(135deg, var(--primary-color), #6610f2);
+            padding: 20px 0;
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-right: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a32a8;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #199d7a;
+        }
+
+        .result-card {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .live-email {
+            border-left: 4px solid #28a745;
+        }
+
+        .die-email {
+            border-left: 4px solid #dc3545;
+        }
+
+        .stat-box {
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .stat-box i {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            height: 10px;
+            margin: 15px 0;
+        }
+
+        .theme-switch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        body.dark-mode ::-webkit-scrollbar-track {
+            background: #2c2c2c;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+
+        /* Animation for progress bar */
+        .progress-bar {
+            transition: width 0.5s ease;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-container h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+/*
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 1.0
+*/

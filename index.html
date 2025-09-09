@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Email Bounce Checker - DARKXCDOE</title>
+    <link rel="icon" href="img/mail.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 1.0
+-->
+
+    <div class="header-container text-center text-white">
+        <div class="container">
+            <h1 class="mb-3"><i class="fas fa-envelope logo"></i> BULK EMAIL BOUNCE CHECKER</h1>
+            <p class="lead">Validate your email lists efficiently with our powerful bounce checker tool</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card p-4">
+                    <h3 class="mb-4"><i class="fas fa-cog me-2"></i>Configuration</h3>
+                    
+                    <div class="mb-3">
+                        <label for="apikey" class="form-label">API Key <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="apikey" placeholder="Enter your API key">
+                            <button class="btn btn-outline-secondary" type="button" id="toggleApiKey">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-text">
+                            How to get API key: Contact <a href="https://t.me/zlaxtert" target="_blank">Telegram</a> or <a href="https://instagram.com/darkxcode_" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="proxy" class="form-label">Proxy List (IP:PORT)</label>
+                        <textarea class="form-control" id="proxy" rows="2" placeholder="192.168.1.1:8080&#10;192.168.1.2:8080"></textarea>
+                        <div class="form-text">Enter one proxy per line. Multiple proxies will be used in rotation.</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="proxyAuth" class="form-label">Proxy Authentication (username:password)</label>
+                            <input type="text" class="form-control" id="proxyAuth" placeholder="username:password">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="typeProxy" class="form-label">Proxy Type <span class="text-danger">*</span></label>
+                            <select class="form-select" id="typeProxy">
+                                <option value="http">HTTP</option>
+                                <option value="socks4">SOCKS4</option>
+                                <option value="socks5">SOCKS5</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="emailLists" class="form-label">Email Lists <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="emailLists" rows="5" placeholder="example1@example.com&#10;example2@example.com"></textarea>
+                        <div class="form-text">Enter one email per line or upload a file.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="fileUpload" class="form-label">Upload Email List (TXT/CSV)</label>
+                        <input type="file" class="form-control" id="fileUpload" accept=".txt,.csv">
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-lg" id="startBtn">
+                            <i class="fas fa-play-circle me-2"></i>Start Checking
+                        </button>
+                        <button class="btn btn-danger btn-lg" id="stopBtn" disabled>
+                            <i class="fas fa-stop-circle me-2"></i>Stop Checking
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card p-4">
+                    <h3 class="mb-4"><i class="fas fa-chart-line me-2"></i>Progress & Statistics</h3>
+<!--
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 1.0
+-->
+                    <div class="row text-center mb-4">
+                        <div class="col-md-4">
+                            <div class="stat-box bg-light">
+                                <i class="fas fa-envelope-open-text text-primary"></i>
+                                <h5 id="totalEmails">0</h5>
+                                <p>Total Emails</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box bg-light">
+                                <i class="fas fa-spinner text-warning"></i>
+                                <h5 id="remainingEmails">0</h5>
+                                <p>Remaining</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box bg-light">
+                                <i class="fas fa-check-circle text-success"></i>
+                                <h5 id="checkedEmails">0</h5>
+                                <p>Checked</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Progress</label>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Current Status</label>
+                        <div class="alert alert-info" id="currentStatus">Ready to start</div>
+                    </div>
+                </div>
+                
+                <div class="card p-4 mt-4">
+                    <h3 class="mb-4"><i class="fas fa-filter me-2"></i>Filter Options</h3>
+                    
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="filterValidEmails" checked>
+                        <label class="form-check-label" for="filterValidEmails">Validate email format before checking</label>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" id="clearResultsBtn">
+                            <i class="fas fa-broom me-2"></i>Clear Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card result-card">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0"><i class="fas fa-check-circle me-2"></i>LIVE Emails</h4>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span id="liveCount">0 found</span>
+                            <button class="btn btn-sm btn-light" id="copyLiveBtn">
+                                <i class="fas fa-copy me-1"></i>Copy All
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush" id="liveResults">
+                            <!-- LIVE results will be added here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card result-card">
+                    <div class="card-header bg-danger text-white">
+                        <h4 class="mb-0"><i class="fas fa-times-circle me-2"></i>DIE Emails</h4>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span id="dieCount">0 found</span>
+                            <button class="btn btn-sm btn-light" id="copyDieBtn">
+                                <i class="fas fa-copy me-1"></i>Copy All
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush" id="dieResults">
+                            <!-- DIE results will be added here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 1.0
+-->
+        <footer class="text-center">
+            <p>&copy; <span id="currentYear"></span> DARKXCODE | Contact: <a href="https://t.me/zlaxtert" target="_blank">Telegram</a></p>
+        </footer>
+    </div>
+
+    <div class="theme-switch">
+        <button class="btn btn-primary btn-rounded" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/call.js" type="text/javascript"></script>
+</body>
+</html>
